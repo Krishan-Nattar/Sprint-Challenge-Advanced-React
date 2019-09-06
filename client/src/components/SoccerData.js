@@ -1,6 +1,8 @@
 import React from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { Card } from "semantic-ui-react";
+// import { LineChart, PieChart } from 'react-chartkick'
+// import 'chart.js'
 
 const SoccerData = props => {
   const { data } = props;
