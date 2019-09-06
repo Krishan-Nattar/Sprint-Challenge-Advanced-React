@@ -1,41 +1,31 @@
-import React from 'react';
-import axios from 'axios';
-import useLocalStorage from '../hooks/useLocalStorage';
+import React from "react";
+import axios from "axios";
+import SoccerData from "./SoccerData";
 
 
 class SoccerClassComponent extends React.Component {
-    constructor(props){
-        super(props)
-        this.state={
-            data: null
-        }
-    }
-    // state = {  }
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      data: null
+    };
+  }
 
+  componentDidMount() {
+    // console.log('running axios...')
+    axios.get("http://localhost:5000/api/players").then(res => {
+        this.setState({data:res.data});
+    });
+  }
 
-    componentDidMount(){
-            axios
-            .get('http://localhost:5000/api/players')
-            .then(res=>{
-                console.log(res.data);
-            })
-    }
-
-
-
-    render() { 
-
-
+  render() {
+    return <div>
+        soccer
+        {(this.state.data) ? <SoccerData data={this.state.data} /> : null}
         
-        return ( 
-        
-        <div>
-
-            soccer
-        </div> 
-        );
-    }
+        </div>;
+  }
 }
- 
+
 export default SoccerClassComponent;
