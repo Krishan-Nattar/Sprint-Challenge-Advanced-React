@@ -1,5 +1,6 @@
 import React from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
+import {Card} from 'semantic-ui-react';
 
 const SoccerData = props => {
   const { data } = props;
@@ -7,15 +8,25 @@ const SoccerData = props => {
   console.log(value);
 
   return (
-    <div>
+    <Card.Group>
       {value.map(person => {
-        return <div key={person.id}>
-            <p>{person.name}</p>
-            <p>{person.country}</p>
-            <p>Searches: {person.searches}</p>
-            </div>;
+        return  <Card key={person.id}>
+        <Card.Content>
+          <Card.Header>{person.name}</Card.Header>
+          <Card.Meta>Searches: {person.searches}</Card.Meta>
+          <Card.Description>
+          {person.country}
+          </Card.Description>
+        </Card.Content>
+      </Card>
+        
+        // <div >
+        //     <p></p>
+        //     <p></p>
+        //     <p></p>
+        //     </div>;
       })}
-    </div>
+    </Card.Group>
   );
 };
 

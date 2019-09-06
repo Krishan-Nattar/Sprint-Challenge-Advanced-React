@@ -5,7 +5,6 @@ import SoccerClassComponent from './components/SoccerClassComponent';
 function App() {
   return (
     <div className="App">
-      App
       <SoccerClassComponent />
     </div>
   );
