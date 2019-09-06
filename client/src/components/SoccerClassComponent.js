@@ -16,6 +16,10 @@ class SoccerClassComponent extends React.Component {
     });
   }
 
+  componentWillUnmount(){
+      
+  }
+
   render() {
     return (
       <div>
