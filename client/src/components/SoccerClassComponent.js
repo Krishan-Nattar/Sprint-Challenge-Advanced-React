@@ -1,9 +1,16 @@
 import React from 'react';
 import axios from 'axios';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 
 class SoccerClassComponent extends React.Component {
-    state = {  }
+    constructor(props){
+        super(props)
+        this.state={
+            data: null
+        }
+    }
+    // state = {  }
 
 
 
