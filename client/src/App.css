@@ -1,5 +1,21 @@
 .App {
   text-align: center;
+  margin: 20px auto;
+  /* border: 1px solid; */
+  /* display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center; */
+}
+
+.dark-mode{
+  color:white;
+  background-color: black;
+}
+
+.btn{
+  margin-bottom: 20px !important;
 }
 
 .App-logo {
